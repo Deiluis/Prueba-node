@@ -5,7 +5,7 @@ const obtenerDatos = async (nombreProyecto) => {
 
     // Sanitizar nombre de proyecto
 
-    const res = await fetch(`./productos.json`, {
+    const res = await fetch(`../productos.json`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -15,8 +15,8 @@ const obtenerDatos = async (nombreProyecto) => {
     try {
         console.log(res);
 
-        const json = await res.json();
-        console.log(json);
+        const text = await res.text();
+        console.log(text);
     } catch (error) {
         console.log(error);
     }
