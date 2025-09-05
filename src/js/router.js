@@ -12,6 +12,15 @@ const obtenerDatos = async (nombreProyecto) => {
         }
     });
 
+    try {
+        console.log(res);
+
+        const json = res.json();
+        console.log(json);
+    } catch (error) {
+        console.log(error);
+    }
+
     console.log(res.status);
 }
 
